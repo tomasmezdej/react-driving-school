@@ -1,0 +1,58 @@
+@import "./variables.scss";
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0px 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: $font-family;
+  background-color: $background-color;
+  h1, h2, h3, h4, h5, h6 {
+    color: $primary-color;
+  }
+  background-image: url("../images/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.row {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.col-12 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+
+.main_blob {
+  position: absolute;
+  height: 120vh;
+  width: 120vh;
+  right: -55vh;
+  top: -25vh;
+  border-radius: 100%;
+  z-index: 0;
+  img {
+    position: absolute;
+    top: 35vh;
+    right: 65vh;
+    width: 100vh;
+    z-index: 0;
+  }
+}
+@import "./components/button.scss";
+@import "./components/mainPage.scss";
+@import "./components/banner.scss";
+@import "./components/infoCard.scss";
+@import "./components/header.scss";
+@import "./components/mainPageBody.scss";
+@import "./components/footer.scss";

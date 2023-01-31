@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 70px;
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    z-index: 5;
+    li {
+      cursor: pointer;
+      position: relative;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 10px 30px;
+      transition: 0.3s;
+
+      &:hover:not(.contact) {
+        color: $primary-color;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0px;
+        left: 0;
+        background-color: $primary-color;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+    }
+    .logo {
+      cursor: default;
+      display: flex;
+      flex-direction: column;
+      padding: 5px 0px;
+      font-weight: bolder;
+      font-size: 25px;
+      label {
+        font-weight: normal;
+        font-size: 12px;
+      }
+    }
+    .contact {
+      cursor: default;
+      display: flex;
+      justify-self: end;
+      flex-direction: column;
+      padding: 10px 0px;
+      font-weight: bold;
+      color: $secondary-color;
+      label {
+        display: flex;
+        align-items: center;
+        font-weight: normal;
+        font-size: 12px;
+      }
+    }
+    .active {
+      color: $primary-color;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0px;
+        left: 0;
+        background-color: $primary-color;
+        transform: scaleX(1);
+        transition: transform 0.3s ease;
+      }
+      // border-bottom: 2px solid $primary-color;
+    }
+
+    li:hover::before {
+      transform: scaleX(1);
+    }
+
+
+  }
+}
