@@ -68,9 +68,13 @@ export default function Header() {
         </li>
       </ul>
 
-      <div className="main_blob">
-        <img src={logo} alt="" />
-      </div>
+      {
+        /*
+        <div className="main_blob">
+          <img src={logo} alt="" />
+        </div>
+        */
+      }
     </div>
   )
 }

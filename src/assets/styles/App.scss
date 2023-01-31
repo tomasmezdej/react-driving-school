@@ -1,5 +1,5 @@
 @import "./variables.scss";
-
+@import 'bootstrap/dist/css/bootstrap.css';
 body {
   overflow-x: hidden;
   margin: 0;
@@ -19,19 +19,12 @@ body {
 
 }
 
-.row {
-  display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+.bg-red {
+  background-color: red;
 }
-.col-12 {
-  width: 100%;
+.bg-orange {
+  background-color: orange;
 }
-
-.col-6 {
-  width: 50%;
-}
-
 
 .main_blob {
   position: absolute;
