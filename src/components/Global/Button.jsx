@@ -4,7 +4,7 @@ export default function Button(props) {
       onClick={props.onClick}
       className={props.secondary ? "secondary-button" : "primary-button"}
     >
-      {props.title || "Click me"}
+      {props.title || "title=\"Click me\""}
     </button>
   )
 }

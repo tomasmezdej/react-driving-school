@@ -1,0 +1,11 @@
+
+.trainersCard {
+  h1 {
+    color: black;
+    font-weight: bold;
+  }
+  h6 {
+    color: $text-color-secondary;
+  }
+}
+@import "./trainersImageCard.scss";

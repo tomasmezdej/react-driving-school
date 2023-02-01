@@ -1,12 +1,63 @@
 .banner {
+  min-height: 75vh;
+  @media only screen and (min-width: 992px) {
+    min-height: 90vh;
+  }
+  position: relative;
+  .banner__background_text {
+    margin: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    color: $secondary-color;
+    text-shadow: 0 0 1em $text-color-secondary, 0 0 0.2em $text-color-secondary;
+    opacity: 0.05;
+    font-size: 300px;
+    font-weight: 900;
+    transform: translateX(-210px) translateY(290px);
+    text-transform: uppercase;
+  }
   h1{
-    font-size: 90px;
-    line-height: 75px;
     color: black;
+    font-size: 4.5rem;
+    line-height: 60px;
     margin-bottom: 30px;
   }
   h3 {
     color: black;
-    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  @media only screen and (min-width: 992px) {
+    height: 80vh;
+    h1{
+      // font-size: 90px;
+      font-size: 5.5rem;
+      line-height: 75px;
+      color: black;
+      margin-bottom: 30px;
+      margin-top: -300px;
+    }
+    h3 {
+      margin-top: -90px;
+      color: black;
+      font-weight: 500;
+    }
+  }
+
+}
+.banner__car_logo {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  @media only screen and (min-width: 992px) {
+    margin-right: -170px;
+    margin-top: -100px;
+    width: 75%;
+  }
+
+  @media only screen and (max-width: 991px) {
+    margin-top: -70px;
+    width: 120%;
   }
 }

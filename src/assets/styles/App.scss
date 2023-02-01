@@ -1,5 +1,6 @@
 @import "./variables.scss";
 @import 'bootstrap/dist/css/bootstrap.css';
+
 body {
   overflow-x: hidden;
   margin: 0;
@@ -14,9 +15,11 @@ body {
   }
   background-image: url("../images/background.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
+  background-size: contain;
+  *::selection {
+    background: $primary-color;
+    color: white;
+  }
 }
 
 .bg-red {
@@ -45,7 +48,8 @@ body {
 @import "./components/button.scss";
 @import "./components/mainPage.scss";
 @import "./components/banner.scss";
-@import "./components/infoCard.scss";
+@import "./components/cards/infoCard.scss";
+@import "./components/cards/trainersCard.scss";
 @import "./components/header.scss";
 @import "./components/mainPageBody.scss";
 @import "./components/footer.scss";
