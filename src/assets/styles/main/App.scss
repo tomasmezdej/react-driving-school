@@ -1,0 +1,38 @@
+@import "~/src/assets/styles/variables.scss";
+@import 'bootstrap/dist/css/bootstrap.css';
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0px 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: $font-family;
+  background-color: $background-color;
+  h1, h2, h3, h4, h5, h6 {
+    color: $primary-color;
+  }
+  background-image: url("~/src/assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  *::selection {
+    background: $primary-color;
+    color: white;
+  }
+  scroll-behavior: smooth;
+}
+
+.bg-red {
+  background-color: rgb(177, 54, 54);
+}
+.bg-orange {
+  background-color: orange;
+}
+.bg-green {
+  background-color: rgb(47, 151, 47);
+}
+
+.bg-blue {
+  background-color: rgb(41, 176, 243);
+}

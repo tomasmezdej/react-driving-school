@@ -1,6 +1,8 @@
 import IconWithDescr from "./IconWithDescr"
 import TrainerImage from "./TrainerImage"
 
+import "../../assets/styles/cards/trainersCard.scss";
+
 /*
   props = {
     title
@@ -13,62 +15,33 @@ const TrainersCard = (props) => {
 
   return (
     <div className="trainersCard row">
-      <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+      <div className="col-12 col-sm-12 col-md-5 col-lg-6">
         <h1>
-          { props.title } {props.trainers[0].name}
+          { props.title }
         </h1>
         <h6>
           { props.description }
         </h6>
-        <div className="w-75 mt-5">
-          <IconWithDescr
-            info={props.info[0]}
-          />
-          <IconWithDescr
-            info={props.info[1]}
-          />
-          <IconWithDescr
-            info={props.info[2]}
-          />
-          <IconWithDescr
-            info={props.info[3]}
-          />
+        <div className="mt-4 mb-sm-0 mb-5" style={{"max-width": "500px"}}>
+          { props.info.map(info =>
+              <IconWithDescr
+                info={info}
+              />
+            )
+          }
         </div>
       </div>
-      <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+      <div className="col-12 col-sm-12 col-md-7 col-lg-6">
         <div className="row">
-          <div className="col-4">
-            <TrainerImage
-              info={props.trainers[0]}
-            />
-          </div>
-          <div className="col-4">
-            <TrainerImage
-              info={props.trainers[1]}
-            />
-          </div>
-          <div className="col-4">
-            <TrainerImage
-              info={props.trainers[2]}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-4">
-            <TrainerImage
-              info={props.trainers[3]}
-            />
-          </div>
-          <div className="col-4">
-            <TrainerImage
-              info={props.trainers[4]}
-            />
-          </div>
-          <div className="col-4">
-            <TrainerImage
-              info={props.trainers[5]}
-            />
-          </div>
+          {
+            props.trainers.map(trainerInfo =>
+              <div className="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <TrainerImage
+                  info={trainerInfo}
+                />
+              </div>
+            )
+          }
         </div>
       </div>
     </div>

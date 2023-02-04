@@ -3,10 +3,10 @@ import { TbLicense, TbRoute } from "react-icons/tb"
 import { IoCarSportOutline } from "react-icons/io5"
 import { BsStar } from "react-icons/bs"
 
-import trainerOne from "../../../assets/images/trainerOne.png"
-import trainerTwo from "../../../assets/images/trainerTwo.png"
-import trainerThree from "../../../assets/images/trainerThree.png"
-import trainerFour from "../../../assets/images/trainerFour.png"
+import trainerOne from "../assets/images/trainerOne.png"
+import trainerTwo from "../assets/images/trainerTwo.png"
+import trainerThree from "../assets/images/trainerThree.png"
+import trainerFour from "../assets/images/trainerFour.png"
 
 
 const iconSize = 50

@@ -5,9 +5,9 @@ const IconWithDescr = (props) => {
         { props.info.icon }
       </div>
       <div>
-        <h4>
+        <h5>
           { props.info.title }
-        </h4>
+        </h5>
         <p>
           { props.info.text }
         </p>

@@ -1,3 +1,5 @@
+@import "~/src/assets/styles/variables.scss";
+
 .infoCard {
   margin-bottom: 20px;
   -moz-box-shadow: 0 0 10px #ccc;
@@ -5,6 +7,10 @@
   box-shadow: 0 0 10px #ccc;
 
   background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   h1 {
     font-weight: bolder !important;
@@ -24,8 +30,9 @@
   margin-top: 10px;
   display: flex;
 
-  h1, h3, h4 {
+  h1, h3, h4, h5 {
     color: black;
+    font-weight: bold;
   }
   p {
     color: $text-color-secondary;

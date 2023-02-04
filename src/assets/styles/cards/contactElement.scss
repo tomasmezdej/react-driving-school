@@ -1,0 +1,47 @@
+.contactElement {
+  position: relative;
+  text-align: center;
+  &:hover {
+    .contactElement__info {
+      visibility: visible;
+      height: 100%;
+      padding-bottom: 50px;
+    }
+    .contactElement__copy_icon {
+      visibility: visible;
+    }
+  }
+  h6, small {
+    color: black;
+    line-height: 10px;
+  }
+}
+.contactElement__info {
+  // visibility: hidden;
+  position: absolute;
+  transition: 0.5s;
+  width: 90%;
+  overflow: hidden;
+  height: 0px;
+}
+.contactElement__icon {
+}
+.contactElement__copy_icon {
+  position: absolute;
+  visibility: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+  &:active {
+    transform: scale(1.5);
+
+  }
+  &:active + .contactElement__copied_message {
+    visibility: visible;
+  }
+}
+.contactElement__copied_message {
+  transition: 1s;
+  visibility: hidden;
+  position: absolute;
+  margin-left: 20px;
+}

@@ -1,3 +1,4 @@
+@import "~/src/assets/styles/variables.scss";
 
 .trainersCard {
   h1 {
@@ -8,4 +9,4 @@
     color: $text-color-secondary;
   }
 }
-@import "./trainersImageCard.scss";
+

@@ -1,6 +1,8 @@
 import Button from "../Global/Button";
 import logo from "../../assets/images/car.png"
 
+import "../../assets/styles/banner.scss";
+
 export default function Banner() {
   return (
    <div className="banner d-flex flex-column">

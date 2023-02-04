@@ -4,20 +4,18 @@ import { MdLocationOn, MdOutlineMenu } from 'react-icons/md';
 
 import HeaderBrand from "./HeaderBrand";
 
-export default function Header() {
-  const [path, setPath] = useState("trainers")
-  const [menu, setMenu] = useState(false)
-  const scrollToSelectedItem = (event) => {
-    const path = event.target.outerText.toLowerCase()
-    setPath(() => { return path})
-    setTimeout(() => {
-      setMenu(false)
-    }, 300);
-    console.log(path)
-  }
+import "../../../assets/styles/main/header.scss";
 
-  const isActive = (val) => {
-    return path === val ? 'header__element_active' : ''
+export default function Header() {
+  const [menu, setMenu] = useState(false)
+
+  const scrollToSelectedItem = (id) => {
+    document.getElementById(`${id}_SECTION`).scrollIntoView({ block: 'start',  behavior: 'smooth' })
+    setTimeout(() => {
+      if (menu) {
+        setMenu(false)
+      }
+    }, 300);
   }
 
   const openMenuHandler = () => {
@@ -27,7 +25,7 @@ export default function Header() {
   }
 
   return (
-    <div className="navbar">
+    <div className="navbar" style={{"z-index": "100"}} id="HOME_SECTION">
       <div className="container">
 
         <div className="navbar brand header__brand_mobile">
@@ -41,53 +39,64 @@ export default function Header() {
           </div>
         </div>
         <div className={`nav me-auto ${(menu) ? "header__nav_mobile" : "header__nav_mobile_hidden"}`}>
-          <div className="nav link">
+          <div
+            className="nav link"
+            onClick={() => {scrollToSelectedItem("HOME")}}
+          >
             <HeaderListElement
-              title="learn"
-              scrollToSelectedItem={scrollToSelectedItem}
-              isActive={isActive('learn')}
+              title="Home"
             />
           </div>
-          <div className="nav link">
+          <div
+            className="nav link"
+            onClick={() => {scrollToSelectedItem("PRICE")}}
+          >
             <HeaderListElement
               title="price"
-              scrollToSelectedItem={scrollToSelectedItem}
-              isActive={isActive('price')}
             />
           </div>
-          <div className="nav link">
+          <div
+            className="nav link"
+            onClick={() => {scrollToSelectedItem("TRAINERS")}}
+          >
             <HeaderListElement
               title="trainers"
-              scrollToSelectedItem={scrollToSelectedItem}
-              isActive={isActive('trainers')}
             />
           </div>
-          <div className="nav link">
+          <div
+            className="nav link"
+            onClick={() => {scrollToSelectedItem("CARS")}}
+          >
             <HeaderListElement
               title="cars"
-              scrollToSelectedItem={scrollToSelectedItem}
-              isActive={isActive('cars')}
             />
           </div>
-          <div className="nav link">
+          <div
+            className="nav link"
+            onClick={() => {scrollToSelectedItem("ON-LINE")}}
+          >
             <HeaderListElement
               title="on-line"
-              scrollToSelectedItem={scrollToSelectedItem}
-              isActive={isActive('on-line')}
             />
           </div>
-          <div className="nav link">
-            <HeaderListElement
-              title="feedback"
-              scrollToSelectedItem={scrollToSelectedItem}
-              isActive={isActive('feedback')}
-            />
-          </div>
-          <div className="nav link d-lg-none">
+          {
+            /*
+            <div
+              className="nav link"
+              onClick={() => {scrollToSelectedItem("FEEDBACK")}}
+            >
+              <HeaderListElement
+                title="feedback"
+              />
+            </div>
+            */
+          }
+          <div
+            className="nav link"
+            onClick={() => {scrollToSelectedItem("CONTACT")}}
+          >
             <HeaderListElement
               title="contact"
-              scrollToSelectedItem={scrollToSelectedItem}
-              isActive={isActive('contact')}
             />
           </div>
         </div>
@@ -98,8 +107,6 @@ export default function Header() {
             icon={<MdLocationOn size={20}/>}
             className="header__contact"
             subtitle="All districts"
-            scrollToSelectedItem={scrollToSelectedItem}
-            isActive={isActive('contact')}
           />
         </div>
       </div>

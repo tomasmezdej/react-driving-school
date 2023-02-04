@@ -1,0 +1,40 @@
+@import "~/src/assets/styles/variables.scss";
+
+.trainersImageCard {
+  position: relative;
+  box-shadow: 0 0 10px #ccc;
+  height: 100%;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+  h6 {
+    color: black;
+  }
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+    h6 {
+      color: white;
+    }
+    .trainersImageCard__hover_info  {
+      display: block;
+    }
+  }
+  // cursor: pointer;
+  transition: 0.2s;
+}
+.trainersImageCard__hover_info {
+  display: none;
+  position: absolute;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  width: 100%;
+  height: 100%;
+  h6 {
+    opacity: 0.8;
+    line-height: 15px;
+  }
+  p {
+    line-height: 5px;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../variables.scss";
+
+.carImage {
+  position: relative;
+  box-shadow: 0 0 10px #ccc;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    max-width: 70%;
+  }
+  h5 {
+    color: black;
+    font-weight: bold;
+  }
+  p small {
+    color: $text-color-secondary;
+  }
+}
+.carImage__button {
+  width: 200px;
+  @media only screen and (max-width: 991px) {
+    width: auto;
+  }
+}
+.carImage__background_text {
+  margin: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-shadow: 0 0 1em $text-color-secondary, 0 0 0.2em $text-color-secondary;
+  opacity: 0.06;
+  color: #F7F7F7;
+  font-size: 80px;
+  transform: translateX(-54px) translateY(-78px);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.carImage__image_holder {
+  display: flex;
+  justify-content: start;
+  @media only screen and (max-width: 991px) {
+    justify-content: center;
+
+  }
+}

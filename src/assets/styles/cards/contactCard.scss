@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.contactCard {
+  h1 {
+    color: black;
+  }
+  h6 {
+    color: $text-color-secondary;
+  }
+}
