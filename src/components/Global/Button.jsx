@@ -1,4 +1,4 @@
-import "../../assets/styles/button.scss";
+import "../../assets/styles/global/button.scss";
 
 export default function Button(props) {
 

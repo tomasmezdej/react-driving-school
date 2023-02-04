@@ -16,7 +16,7 @@ const ContactElement = (props) => {
           className="contactElement__copy_icon"
           onClick={copyButtonHandler}
         />
-        <small className="contactElement__copied_message">Copied to clipboard</small>
+        <small className="contactElement__copied_message">Copied</small>
       </div>
       <div className="contactElement__info">
         <div className="p-1">

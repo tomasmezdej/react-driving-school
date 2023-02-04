@@ -1,10 +1,32 @@
 @import "../variables.scss";
 
 .onlineLearningCard {
- h1 {
-  color: black;
- }
- h6 {
-  color: $text-color-secondary;
- }
+  h1 {
+    color: black;
+  }
+  h6 {
+    color: $text-color-secondary;
+  }
+}
+.onlineLearningCard__limited_text {
+  max-width: 500px;
+}
+.onlineLearningCard__button_mobile_hidden {
+  display: block;
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}.onlineLearningCard__button_mobile_visible {
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+}
+.onlineLearningCard__online_tests {
+  transition: 0.3s;
+  height: 0vh;
+  visibility: hidden;
+}
+.onlineLearningCard__online_tests_visible {
+  visibility: visible;
+  height: 100vh;
 }
