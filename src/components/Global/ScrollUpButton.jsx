@@ -17,11 +17,13 @@ const ScrollUpButton = () => {
   })
 
   return (
-    <div className={`scrollUpButton ${buttonVisibility ? "scrollUpButton__visible" : "scrollUpButton__hidden"}`}>
+    <div
+      className={`scrollUpButton ${buttonVisibility ? "scrollUpButton__visible" : "scrollUpButton__hidden"}`}
+      onClick={handleClick}
+    >
       <BsChevronUp
         color="white"
         strokeWidth="3"
-        onClick={handleClick}
       />
     </div>
   )
