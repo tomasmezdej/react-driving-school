@@ -68,9 +68,9 @@ const ContactElementAddress = (props) => {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48374.32498333731!2d-74.25381313438096!3d40.73132627501041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25370329a0e1d%3A0xe1bcdc2adcfee473!2zTmV3YXJrLCBOZXcgSmVyc2V5LCBTcG9qZW7DqSDFoXTDoXR5IGFtZXJpY2vDqQ!5e0!3m2!1ssk!2ssk!4v1675602682320!5m2!1ssk!2ssk"
                 className="contactElementAddress__iframe"
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             }
           </div>

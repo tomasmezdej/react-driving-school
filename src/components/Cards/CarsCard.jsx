@@ -23,7 +23,7 @@ const CarsCard = (props) => {
         <div className="row">
           {
             props.cars.map((car, index) =>
-              <div className={`mb-4 mb-sm-5 col-12 col-sm-12 col-md-${(index % 2 === 0 && index > 0) ? "12" : "6"} col-lg-4`}>
+              <div key={index} className={`mb-4 mb-sm-5 col-12 col-sm-12 col-md-${(index % 2 === 0 && index > 0) ? "12" : "6"} col-lg-4`}>
                 <CarImage
                   car={car}
                 />

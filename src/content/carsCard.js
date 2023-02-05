@@ -11,7 +11,8 @@ export const cars = [
     transmission: "Mechanical transmission",
     description: `
       Excellent combination of economy class and all the charms of foreign cars - manageability,
-      comfort and reliability of the car`
+      comfort and reliability of the car`,
+    rating: 4
 
   },
   {
@@ -20,7 +21,8 @@ export const cars = [
     img: "",
     transmission: "Mechanical transmission",
     description: `
-      After this car, any other will seem to you more powerful and much more comfortable.`
+      After this car, any other will seem to you more powerful and much more comfortable.`,
+    rating: 2
 
   },
   {
@@ -29,7 +31,8 @@ export const cars = [
     img: "",
     transmission: "Automatic transmission",
     description: `
-      Choose this powerful foreign car if you want to drive a modern car from the first days.`
+      Choose this powerful foreign car if you want to drive a modern car from the first days.`,
+    rating: 3
 
   }
 ]

@@ -4,9 +4,14 @@ import logo from "../../assets/images/car.png"
 import "../../assets/styles/banner.scss";
 
 export default function Banner() {
+
+  const handleClick = (id) => {
+    document.getElementById(`${id}_SECTION`).scrollIntoView({ block: 'start',  behavior: 'smooth' })
+  }
+
   return (
    <div className="banner d-flex flex-column">
-      <div class="d-none d-lg-block banner__background_text">
+      <div className="d-none d-lg-block banner__background_text">
           zuevauto
       </div>
       <div className="row">
@@ -26,14 +31,19 @@ export default function Banner() {
           </h3>
         </div>
       </div>
+
       <div className="row">
-        <div className="col">
+        <div className="col-6 col-lg-3">
           <Button
-            title="Entry"
+            title="Check prices"
+            onClick={() => {handleClick("PRICE")}}
           />
+        </div>
+        <div className="col-6 col-lg-4 d-flex justify-content-start">
           <Button
             secondary
             title="Call me back"
+            onClick={() => {handleClick("CONTACT")}}
           />
         </div>
       </div>

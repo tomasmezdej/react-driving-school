@@ -1,18 +1,11 @@
-import { useState } from "react"
 import "../../assets/styles/cards/onlineLearningCard.scss"
 import Button from "../Global/Button"
 import IconWithDescr from "./IconWithDescr"
 
 const OnlineLearningCard = (props) => {
 
-  const [iframeVisibility, setIframeVisibility] = useState(false)
   const testPageLink = "https://soferuj.sk/testy"
 
-  const handleOpenTestIframe = () => {
-    setIframeVisibility((prevState) => {
-      return !prevState
-    })
-  }
   const handleOpenTestOnSeparatedPage = () => {
     window.open(testPageLink, '_blank')
   }
@@ -36,7 +29,7 @@ const OnlineLearningCard = (props) => {
       </div>
       <div className="row">
         { props.icons.map((info, index) =>
-            <div className={`col-12 col-sm-12 col-md-${index === 0 ? "12" : "6"} col-lg-4`}>
+            <div key={index} className={`col-12 col-sm-12 col-md-${index === 0 ? "12" : "6"} col-lg-4`}>
               <IconWithDescr
                 info={info}
               />

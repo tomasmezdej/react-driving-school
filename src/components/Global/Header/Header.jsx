@@ -25,7 +25,7 @@ export default function Header() {
   }
 
   return (
-    <div className="navbar" style={{"z-index": "100"}} id="HOME_SECTION">
+    <div className="navbar" style={{zIndex: "100"}} id="HOME_SECTION">
       <div className="container">
 
         <div className="navbar brand header__brand_mobile">

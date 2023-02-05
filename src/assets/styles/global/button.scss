@@ -1,6 +1,7 @@
 @import "~/src/assets/styles/variables.scss";
 
 .primary-button {
+  white-space: nowrap;
   background-color: $primary-color;
   border: none;
   color: white;

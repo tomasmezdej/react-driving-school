@@ -22,9 +22,10 @@ const TrainersCard = (props) => {
         <h6>
           { props.description }
         </h6>
-        <div className="mt-4 mb-sm-0 mb-5" style={{"max-width": "500px"}}>
-          { props.info.map(info =>
+        <div className="mt-4 mb-sm-0 mb-5" style={{maxWidth: "500px"}}>
+          { props.info.map((info, index) =>
               <IconWithDescr
+                key={index}
                 info={info}
               />
             )
@@ -34,8 +35,8 @@ const TrainersCard = (props) => {
       <div className="col-12 col-sm-12 col-md-7 col-lg-6">
         <div className="row">
           {
-            props.trainers.map(trainerInfo =>
-              <div className="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+            props.trainers.map((trainerInfo, index) =>
+              <div key={index} className="col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                 <TrainerImage
                   info={trainerInfo}
                 />
