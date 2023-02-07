@@ -71,6 +71,17 @@
   }
 }
 
+.initially-hidden-left {
+  position: relative;
+  opacity: 0;
+  left: -800px;
+}
+.initially-hidden-right {
+  position: relative;
+  opacity: 0;
+  right: -800px;
+}
+
 .hidden-from-left {
   position: relative;
   opacity: 0;
