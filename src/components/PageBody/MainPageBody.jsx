@@ -9,7 +9,6 @@ import ContactSection from "../Sections/ContactSection"
 
 export default function MainPageBody() {
 
-
   return (
     <div className="mainPageBody container">
       <div className="row pt-4">

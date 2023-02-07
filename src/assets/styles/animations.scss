@@ -1,0 +1,117 @@
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    left: -800px;
+  }
+  to {
+    opacity: 1;
+    left: 0px
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    right: -800px;
+  }
+  to {
+    opacity: 1;
+    right: 0px
+  }
+}
+@keyframes slideToLeft {
+  from {
+    left: 0px;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: -800px;
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    opacity: 1;
+    right: 0px;
+  }
+  to {
+    opacity: 0;
+    right: -800px;
+  }
+}
+
+@keyframes slideToBottom {
+  from {
+    opacity: 1;
+    bottom: 0px;
+  }
+  to {
+    opacity: 0;
+    bottom: -800px;
+  }
+}
+
+@keyframes slideFromUp {
+  from {
+    top: -800px;
+  }
+  to {
+    top: 0px
+  }
+}
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    bottom: -800px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0px
+  }
+}
+
+.hidden-from-left {
+  position: relative;
+  opacity: 0;
+  left: -800px;
+  animation-name: slideToLeft;
+  animation-duration: 0.8s;
+}
+.hidden-from-right {
+  position: relative;
+  opacity: 0;
+  right: -800px;
+  animation-name: slideToRight;
+  animation-duration: 0.8s;
+}
+
+.hidden-from-bottom {
+  position: relative;
+  opacity: 0;
+  bottom: -800px;
+  animation-name: slideToBottom;
+  animation-duration: 0.8s;
+}
+
+
+.slide-from-left {
+  position: relative;
+  animation-name: slideFromLeft;
+  animation-duration: 0.8s;
+}
+.slide-from-right {
+  position: relative;
+  animation-name: slideFromRight;
+  animation-duration: 0.8s;
+}
+.slide-from-up {
+  position: relative;
+  animation-name: slideFromUp;
+  animation-duration: 0.8s;
+}
+.slide-from-bottom {
+  position: relative;
+  animation-name: slideFromBottom;
+  animation-duration: 0.8s;
+}

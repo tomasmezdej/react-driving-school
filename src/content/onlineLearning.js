@@ -12,7 +12,7 @@ export const title = "On-line learning"
 
 export const description = `
   Check the quality of our lectures, and do not go to a lecture at the driving school anymore`
-
+export const buttonText = "Open tests on separated page"
 export const icons = [
   {
     title: "Everywhere  & everytime",

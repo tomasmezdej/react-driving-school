@@ -1,6 +1,7 @@
 import CarImage from "./CarImage"
 
 import "../../assets/styles/cards/trainersCard.scss";
+import { useState } from "react";
 /*
   props: {
     title
@@ -9,9 +10,26 @@ import "../../assets/styles/cards/trainersCard.scss";
   }
 */
 const CarsCard = (props) => {
+
+  const [scrolledPast, setScrolledPast] = useState(false)
+
+  window.addEventListener("scroll", function() {
+    var elementTarget = document.getElementById("CARS_CARD_HEADER");
+    // if (elementTarget.offsetTop - )
+    if (elementTarget.offsetTop - window.scrollY < 700) {
+      if (!scrolledPast) {
+        setScrolledPast(true)
+      }
+    } else {
+      if (scrolledPast) {
+        setScrolledPast(false)
+      }
+    }
+  })
+
   return (
     <div className="trainersCard row">
-      <div className="col-12 col-sm-12 col-md-12 col-lg-4 mb-4">
+      <div id="CARS_CARD_HEADER" className={`col-12 col-sm-12 col-md-12 col-lg-4 mb-4 ${scrolledPast ? "slide-from-left" : "hidden-from-left"}`}>
         <h1>
           { props.title }
         </h1>
@@ -19,7 +37,7 @@ const CarsCard = (props) => {
           { props.description }
         </h6>
       </div>
-      <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+      <div className={`col-12 col-sm-12 col-md-12 col-lg-12 ${scrolledPast ? "slide-from-right" : "hidden-from-right"}`}>
         <div className="row">
           {
             props.cars.map((car, index) =>

@@ -6,6 +6,8 @@ import HeaderBrand from "./HeaderBrand";
 
 import "../../../assets/styles/main/header.scss";
 
+import header from "../../../content/header.js"
+
 export default function Header() {
   const [menu, setMenu] = useState(false)
 
@@ -25,7 +27,7 @@ export default function Header() {
   }
 
   return (
-    <div className="navbar" style={{zIndex: "100"}} id="HOME_SECTION">
+    <div className="navbar slide-from-up" style={{zIndex: "100"}} id="HOME_SECTION">
       <div className="container">
 
         <div className="navbar brand header__brand_mobile">
@@ -44,7 +46,7 @@ export default function Header() {
             onClick={() => {scrollToSelectedItem("HOME")}}
           >
             <HeaderListElement
-              title="Home"
+              title={header.home}
             />
           </div>
           <div
@@ -52,7 +54,7 @@ export default function Header() {
             onClick={() => {scrollToSelectedItem("PRICE")}}
           >
             <HeaderListElement
-              title="price"
+              title={header.price}
             />
           </div>
           <div
@@ -60,7 +62,7 @@ export default function Header() {
             onClick={() => {scrollToSelectedItem("TRAINERS")}}
           >
             <HeaderListElement
-              title="trainers"
+              title={header.trainers}
             />
           </div>
           <div
@@ -68,7 +70,7 @@ export default function Header() {
             onClick={() => {scrollToSelectedItem("CARS")}}
           >
             <HeaderListElement
-              title="cars"
+              title={header.cars}
             />
           </div>
           <div
@@ -76,7 +78,7 @@ export default function Header() {
             onClick={() => {scrollToSelectedItem("ON-LINE")}}
           >
             <HeaderListElement
-              title="on-line"
+              title={header.online}
             />
           </div>
           {
@@ -96,17 +98,17 @@ export default function Header() {
             onClick={() => {scrollToSelectedItem("CONTACT")}}
           >
             <HeaderListElement
-              title="contact"
+              title={header.contact}
             />
           </div>
         </div>
         <div className="nav link d-none d-lg-block">
           <HeaderListElement
-            title="+7 903 666-74-79"
+            title={header.phone}
             color="white"
             icon={<MdLocationOn size={20}/>}
             className="header__contact"
-            subtitle="All districts"
+            subtitle={header.destinations}
           />
         </div>
       </div>

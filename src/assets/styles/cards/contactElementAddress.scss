@@ -14,6 +14,7 @@
   visibility: hidden;
 }
 .contactElementAddress__copy_icon {
+  outline: none !important;
   cursor: pointer;
   transition: 0.2s;
   &:active {

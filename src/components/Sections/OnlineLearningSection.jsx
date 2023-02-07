@@ -1,6 +1,6 @@
 import "../../assets/styles/sections/onlineLearningSection.scss"
 import OnlineLearningCard from "../Cards/OnlineLearningCard"
-import { title, description, icons, courses } from "../../content/onlineLearning"
+import { title, description, icons, courses, buttonText } from "../../content/onlineLearning"
 
 const OnlineLearningSection = () => {
   return (
@@ -10,6 +10,7 @@ const OnlineLearningSection = () => {
         description={description}
         icons={icons}
         courses={courses}
+        buttonText={buttonText}
       />
     </div>
   )

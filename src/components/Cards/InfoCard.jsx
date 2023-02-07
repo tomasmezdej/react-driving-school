@@ -31,7 +31,7 @@ export default function InfoCars(props) {
       </div>
       <div className="row">
         <div className="col-12 col-sm-12 col-md-12 col-lg-5">
-          <div className="infoCard__price_holder d-flex align-items-center justify-content-center px-5">
+          <div className="infoCard__price_holder d-flex align-items-center justify-content-center px-5 no-word-break">
             { props.info.price}
           </div>
         </div>
