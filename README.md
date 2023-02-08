@@ -1,13 +1,3 @@
-# Web Structure
-
-• src/index.js
-  • App.js
-    • Header.jsx
-    • MainPage.jsx
-      • MainPageBody.jsx
-    • Footer.jsx
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
