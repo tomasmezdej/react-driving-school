@@ -1,4 +1,4 @@
-## Section order
+## Section order in ../PageBody/MainPageBody.jsx
 
 1. BannerSection
 2. CardsSection
